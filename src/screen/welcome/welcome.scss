@@ -94,7 +94,7 @@
 
 
 
-@keyframes bigCloud {
+@keyframes bigCloudLogin {
     0%{
         transform: translate(20%,-120px) ;
     }
@@ -122,7 +122,7 @@
             width: 50%;
             object-fit: contain;
             transform: translate(20%,-120px);
-            animation:  bigCloud   ease-in-out infinite 2s;
+            animation:  bigCloudLogin    ease-in-out infinite 2s;
     }
 }
 
