@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/umap-website/static/css/main.b298d93f.css",
-    "main.js": "/umap-website/static/js/main.a0d23f31.js",
+    "main.css": "/umap-website/static/css/main.383a5d1e.css",
+    "main.js": "/umap-website/static/js/main.d9106d41.js",
     "static/js/787.fe5dcdae.chunk.js": "/umap-website/static/js/787.fe5dcdae.chunk.js",
     "static/media/cloud_1.png": "/umap-website/static/media/cloud_1.337487a541787ded8c14.png",
     "static/media/map3d_2.png": "/umap-website/static/media/map3d_2.bb153d738c4a71604771.png",
@@ -11,12 +11,12 @@
     "static/media/cloud_2.png": "/umap-website/static/media/cloud_2.65d11c865c598fa0820d.png",
     "static/media/umap-logo.png": "/umap-website/static/media/umap-logo.ffa591be35d11a5c1fed.png",
     "index.html": "/umap-website/index.html",
-    "main.b298d93f.css.map": "/umap-website/static/css/main.b298d93f.css.map",
-    "main.a0d23f31.js.map": "/umap-website/static/js/main.a0d23f31.js.map",
+    "main.383a5d1e.css.map": "/umap-website/static/css/main.383a5d1e.css.map",
+    "main.d9106d41.js.map": "/umap-website/static/js/main.d9106d41.js.map",
     "787.fe5dcdae.chunk.js.map": "/umap-website/static/js/787.fe5dcdae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b298d93f.css",
-    "static/js/main.a0d23f31.js"
+    "static/css/main.383a5d1e.css",
+    "static/js/main.d9106d41.js"
   ]
 }
