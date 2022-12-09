@@ -19,10 +19,125 @@
             width: 50%;
          }
     }
+    .search{
+        z-index: 10;
+        position: fixed;
+        right: 0;
+        margin: 20% 10%;
+       
+        
+        .inputd{
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            
+          
+            height: 30px;
+            align-items: center;
+            justify-content: flex-end;
+            width: 400px;
+            transition: 500ms ease-in-out;
+            img{
+                height: 40px;
+                padding: 20px;
+                position: absolute;
+                cursor: pointer;
+            }
+            input{
+                position: absolute;
+                outline: none;
+                box-sizing: border-box;
+               
+                width: 100%;
+                font-size: 1.4rem;
+                height: 60px;
+                color: #493636;
+                padding-left: 20px;
+                padding-right: 50px;
+                background: rgba(70, 62, 40, 0.111);
+                border-radius: 8px;
+             
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(2px);
+                border: 1px solid rgba(70, 62, 40, 0.035);
+                &::placeholder{
+                    color: rgba(99, 50, 7, 0.5);
+                    
+                }
+            }
+        }
+        .small{
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            
+          
+            height: 30px;
+            align-items: center;
+            justify-content: flex-end;
+            width: 10px;}
+    }
+
+    .map2d{
+        position:absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 20;
+        margin: 3%;
+        img{
+           height: 300px;
+           object-fit: contain;
+           
+        }
+    }
     .canva{
         position: absolute;
         z-index: 1;
         width: 100%;
         height: 100%;
     }
+}
+@media (max-width: 555px) {
+    .main-screen{
+    .search{
+        z-index: 10;
+        position: fixed;
+        right: 0;
+        margin: 50% 10%;
+       
+        
+        .inputd{
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            
+          
+            height: 30px;
+            align-items: center;
+            justify-content: flex-end;
+            width: 300px;
+        }
+        .small{
+            cursor: pointer;
+            
+            width: 10px;
+        }
+        
+        }
+
+        .map2d{
+            position:absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 20;
+            
+            
+            img{
+               height: 230px;
+               object-fit: contain;
+               
+            }
+        }
+    }
+    
 }

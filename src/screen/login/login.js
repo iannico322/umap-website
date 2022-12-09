@@ -18,7 +18,7 @@ export const Login = () => {
 
   function LogIn(e){
     e.preventDefault()
-    if(username == "umap" && password =="umap"){
+    if(username === "umap" && password ==="umap"){
       document.querySelector('.main').click()
       
     }else{

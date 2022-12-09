@@ -2,9 +2,20 @@
     position: fixed;
     z-index: 100;
     width: 100%;
-    
+    pointer-events: none;
     background-color: #ff000027;
 }
+
+.show {
+
+    
+    opacity: 100;
+    transition: 200ms ease-in-out;
+  }
+  
+  .hide {
+    opacity: 0;
+  }
 
 .login-screen{
     position: absolute;

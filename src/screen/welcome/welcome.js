@@ -1,4 +1,4 @@
-import   {React, useState } from "react";
+import   {React} from "react";
 import { Navbar } from "../../components/navbar/navbar";
 import Cloud1 from "./../../media/image/cloud_1.png";
 import Cloud2 from "./../../media/image/cloud_2.png";
