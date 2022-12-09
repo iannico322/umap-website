@@ -78,7 +78,7 @@
 }
 
 .main-screen .map2d {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   z-index: 20;
@@ -98,6 +98,9 @@
 }
 
 @media (max-width: 555px) {
+  .main-screen .main-cloud {
+    margin-top: 20%;
+  }
   .main-screen .search {
     z-index: 10;
     position: fixed;

@@ -80,12 +80,13 @@
     }
 
     .map2d{
-        position:absolute;
+        position:fixed;
         bottom: 0;
         right: 0;
         z-index: 20;
         margin: 3%;
         img{
+        
            height: 300px;
            object-fit: contain;
            
@@ -99,7 +100,11 @@
     }
 }
 @media (max-width: 555px) {
+
     .main-screen{
+        .main-cloud{
+            margin-top: 20%;
+        }
     .search{
         z-index: 10;
         position: fixed;

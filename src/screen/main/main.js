@@ -13,7 +13,7 @@ import { Navbar } from "../../components/navbar/navbar";
 import { Load } from "../loader/loader";
 
 import Magnifying from './../../media/image/Magnifier.png'
-import Map2d from './../../media/image/2dmap.png'
+import Map2d from './../../media/image/2dmapc.png'
 
 import Cloud1 from "./../../media/image/cloud_2-big.png";
 import "./main.css";
@@ -42,7 +42,7 @@ function MainDasboard() {
       <div className="main-screen">
         <div className="page">
           
-          <div className="cloud-model-login">
+          <div className="cloud-model-login  main-cloud">
             <img src={Cloud1} alt="" />
           </div>
         </div>
