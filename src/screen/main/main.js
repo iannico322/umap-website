@@ -38,7 +38,7 @@ function MainDasboard() {
 
   return (
     <>
-      {/* <Load /> */}
+      <Load />
       <div className="main-screen">
         <div className="page">
           
@@ -55,7 +55,7 @@ function MainDasboard() {
           />
           <div className="search">
             <div  className="inputd small" >
-            <input type="text"  placeholder="Search" />
+            <input type="text"  placeholder="Search something" />
             <img src={Magnifying} alt="" onClick={()=>{
               const sh =  document.querySelector('.inputd').classList
               
