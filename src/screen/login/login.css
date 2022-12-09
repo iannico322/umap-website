@@ -1,3 +1,10 @@
+.alert {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: #ff000027;
+}
+
 .login-screen {
   position: absolute;
   height: 100vh;
@@ -48,6 +55,7 @@
 .login-container .login-box form .down {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .login-container .login-box form .down h3 {
@@ -183,8 +191,11 @@
   .login-container .login-box h1 span {
     font-size: 3.2rem;
   }
+  .login-container .login-box h3 {
+    font-size: 1rem;
+  }
   .login-container .login-box div button {
-    min-width: 120px;
+    width: 110px;
     font-size: 1rem;
   }
   .cloud-model-login img {

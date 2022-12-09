@@ -17,9 +17,9 @@ function App() {
      <Router>
       <Routes>
         <Route path="/umap-website" element={<Navigate replace to="/" />} />
-        <Route  path="/" element={<MainDasboard />} />
-        {/* <Route  path="/" element={<Welcome />} /> */}
+        <Route  path="/" element={<Welcome />} />
         <Route  path="login" element={<Login />} />
+        <Route  path="main" element={<MainDasboard />} />
         <Route  path="register" element={<Register />} />
         
       </Routes>

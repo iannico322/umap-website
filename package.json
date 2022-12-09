@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://iannico322.github.io/umap-website/",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.17",
     "@react-three/drei": "9.14.3",
     "@react-three/fiber": "8.0.26",
     "@react-three/postprocessing": "2.4.4",

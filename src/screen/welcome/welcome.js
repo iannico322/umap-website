@@ -1,16 +1,26 @@
-import React from "react";
+import   {React, useState } from "react";
 import { Navbar } from "../../components/navbar/navbar";
 import Cloud1 from "./../../media/image/cloud_1.png";
 import Cloud2 from "./../../media/image/cloud_2.png";
 import Map1 from "./../../media/image/map3d_1.png";
 import {  Link } from "react-router-dom";
+import { Load } from "../loader/loader";
+
 import "./welcome.css";
 
+
+
+
 export const Welcome = () => {
+  
+
     <Link to="/login" className="Press"></Link>
   return (
     <>
-   
+      
+      <Load/>
+      
+    
       <div className="welcome-screen">
         <Navbar 
             link1 = "Sign In"
@@ -43,13 +53,20 @@ export const Welcome = () => {
                     document.querySelector('.Press').click()
                 }}
                 >Student</button>
-               <button >I'm a guest</button>
+               <button 
+               onClick={()=>{
+                document.querySelector('.main').click()
+            }}
+               
+               >I'm a guest</button>
               
             </div>
           </div>
         </div>
       </div>
+      <Link to="/main" className="main"></Link>
       <Link to="/login" className="Press"></Link>
+      
     </>
   );
 };

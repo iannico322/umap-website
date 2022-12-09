@@ -1,14 +1,47 @@
-import React from 'react'
+import {useState,useEffect} from 'react'
 
 import { Input } from "../../components/input/input";
 import Cloud1 from "./../../media/image/cloud_2-big.png";
-import Cloud2 from "./../../media/image/cloud_2.png";
+import {  Link } from "react-router-dom";
 import Map2 from "./../../media/image/map3d_2.png";
 import { Navbar } from '../../components/navbar/navbar';
+import { Load } from '../loader/loader';
+import Alert from '@mui/material/Alert';
+
 import './login.css'
+
+
 export const Login = () => {
+  const [username,setUsername] = useState("")
+  const [password,setPassword] = useState("")
+  const [alert,setAlert] = useState("alert hide")
+
+  function LogIn(e){
+    e.preventDefault()
+    if(username == "umap" && password =="umap"){
+      document.querySelector('.main').click()
+      
+    }else{
+
+      setAlert("alert show")
+      setTimeout(() => {
+        setAlert("alert hide")
+      }, 2000);
+    }
+   
+  }
+
   return (
+    <>
+    <Load/>
+    <div className={alert}>
+    <Alert variant="outlined" severity="error">
+      This is an error alert — check it out!
+    </Alert>
+    </div>
+    
     <div className="login-screen">
+      <div class="ui active centered inline loader"></div>
       <Navbar link2="Register" single=".Press" link1Address="/register" />
 
       <div className="cloud-model-login">
@@ -21,7 +54,7 @@ export const Login = () => {
 
       <div className="login-container">
         <div className="login-box">
-          <form action="">
+          <form  onSubmit={LogIn}>
             <div className="form-title">
               <h2>SIGN IN</h2>
             </div>
@@ -29,20 +62,32 @@ export const Login = () => {
             <Input
             text = "Username"
             placeholder = "username"
-            
+            value = {username}
+            onChange = {
+              e => setUsername(e.target.value)
+            }
             />
             <Input 
             text = "Password"
             placeholder = "password"
             type = "password"
+            value = {password}
+            onChange = {
+              e => setPassword(e.target.value)
+            }
             />
             <div className='down'>
+              
                 <h3>forgot password?</h3>
-                <button>Sign In</button>
+                <button type='submit'>Sign In</button>
+                
             </div>
+          
           </form>
         </div>
       </div>
+      <Link to="/main" className="main"></Link>
     </div>
+    </>
   );
 }

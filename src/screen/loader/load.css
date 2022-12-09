@@ -1,0 +1,14 @@
+.show {
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 100;
+  transition: 200ms ease-in-out;
+}
+
+.hide {
+  position: fixed;
+  opacity: 0;
+  z-index: -100;
+  pointer-events: none;
+}

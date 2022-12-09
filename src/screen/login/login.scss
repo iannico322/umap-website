@@ -1,3 +1,11 @@
+.alert{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    
+    background-color: #ff000027;
+}
+
 .login-screen{
     position: absolute;
     height: 100vh;
@@ -53,6 +61,7 @@
            .down{
             display: flex;
             justify-content: space-between;
+            align-items: center;
             h3{
                 font-weight: 400;
                 
@@ -216,9 +225,12 @@
                     font-size: 3.2rem;
                 }
             }
+            h3{
+                font-size: 1rem;
+            }
             div{
                 button{
-                    min-width: 120px;
+                    width: 110px;
                     font-size: 1rem;
                 }
             }
