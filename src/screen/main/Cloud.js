@@ -1,8 +1,5 @@
 import { useLoader } from '@react-three/fiber';
 import {
-    OrbitControls,
-    PerspectiveCamera,
-    Environment,
     Float,
   } from "@react-three/drei";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -12,7 +9,7 @@ export function Cloud() {
 
   return (
     
-    <Float position={[-10, 50, 40]} rotation={[20, -0.35, -0.05]} rotationIntensity={4.4} floatIntensity={100.5}>
+    <Float position={[20, 50, 60]} rotation={[20, -0.35, -0.05]} rotationIntensity={4.4} floatIntensity={100.5}>
    
    
     

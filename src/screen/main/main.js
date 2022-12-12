@@ -21,21 +21,8 @@ import { Cloud } from "./Cloud";
 import { Search } from "@mui/icons-material";
 
 function MainDasboard() {
-  const [search, setSearch] = useState("Library")
+  const [search, setSearch] = useState("")
   let x = true;
-  // const sh =  document.querySelector('.inputd').classList
-  // let x = true;
-  // const Searchs = () =>{
-
-  //   if(x){
-  //     sh.remove('small')
-  //     x = false;
-  //   }else{
-  //     sh.add('small')
-  //     x = true;
-  //   }
-              
-  // }
 
   return (
     <>
@@ -88,8 +75,10 @@ function MainDasboard() {
               
               <PerspectiveCamera
                 makeDefault
-                fov={15}
-                position={[800.75, 110.85, 10.35]}
+                fov={40}
+                position={[600, 0.85, -10.35]}
+                rotation={[0,199,0]}
+                // position={[0, 0, 0]}
               />
 
               <OrbitControls
@@ -97,12 +86,13 @@ function MainDasboard() {
                 maxPolarAngle={Math.PI * 0.4}
               />
             
-              <Float speed={0.9} rotationIntensity={0.6} floatIntensity={0.6}>
+              <Float speed={0.9} position={[0,0,0]} rotationIntensity={0.6} floatIntensity={0.6}>
               
               <Cloud/>
                 <Map/>
                 < Location
                   search = {search}
+                  
                 />
               </Float>
             </Suspense>
