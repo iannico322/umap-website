@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 
 import { Input } from "../../components/input/input";
 import Cloud1 from "./../../media/image/cloud_2-big.png";

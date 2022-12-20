@@ -25,58 +25,102 @@
         right: 0;
         margin: 20% 10%;
        
-        
-        .inputd{
-            cursor: pointer;
-            display: flex;
-            flex-direction: row;
-            
-          
-            height: 30px;
-            align-items: center;
-            justify-content: flex-end;
-            width: 400px;
-            transition: 500ms ease-in-out;
-            img{
-                height: 40px;
-                padding: 20px;
-                position: absolute;
-                cursor: pointer;
-            }
-            input{
-                position: absolute;
-                outline: none;
+        .search-engine{
+            ul{
+                
                 box-sizing: border-box;
-               
                 width: 100%;
-                font-size: 1.5rem;
-                height: 60px;
-                color: #493636;
-                padding-left: 20px;
-                padding-right: 50px;
-                background: rgba(70, 62, 40, 0.111);
-                border-radius: 8px;
-                font-weight: 700;
-                backdrop-filter: blur(5px);
-                -webkit-backdrop-filter: blur(2px);
-                border: 1px solid rgba(70, 62, 40, 0.035);
-                &::placeholder{
+                list-style: none;
+                font-size: 1rem;
+            
                     color: #493636;
-                    font-weight: 700;
+                    padding: 0;
+                    padding-top: .5rem;
+                    padding-bottom: 1rem;
+                    background: rgba(70, 62, 40, 0.042);
+                    border-radius: 8px;
+                    font-weight: 500;
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(2px);
+                    border: 1px solid rgba(70, 62, 40, 0.035);
+                    min-height: 0px;
+                   
                     
+                li{
+                    display: flex;
+                    flex-wrap: wrap;
+                    cursor: pointer;
+                    color: rgba(90, 90, 90, 0.733);
+                    max-width: 400px;
+                    background-color: rgba(255, 255, 255, 0);
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+                   
+                    text-indent: 20px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.079);
+                    &:hover{
+                        background: rgba(70, 62, 40, 0.035);
+                        color: rgba(52, 52, 52, 0.8);
+                    }
                 }
             }
+            .inputd{
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                
+              
+                height: 30px;
+                align-items: center;
+                justify-content: flex-end;
+                width: 400px;
+                transition: 500ms ease-in-out;
+
+                
+                img{
+                    height: 40px;
+                    padding: 20px;
+                    position: absolute;
+                    cursor: pointer;
+                }
+
+                
+                input{
+                    position: absolute;
+                    outline: none;
+                    box-sizing: border-box;
+                   
+                    width: 100%;
+                    font-size: 1.5rem;
+                    height: 60px;
+                    color: #493636;
+                    padding-left: 20px;
+                    padding-right: 50px;
+                    background: rgba(70, 62, 40, 0.111);
+                    border-radius: 8px;
+                    font-weight: 700;
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(2px);
+                    border: 1px solid rgba(70, 62, 40, 0.035);
+                    &::placeholder{
+                        color: #493636;
+                        font-weight: 700;
+                        
+                    }
+                }
+            }
+            .small{
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                
+              
+                height: 30px;
+                align-items: center;
+                justify-content: flex-end;
+                width: 10px;}
         }
-        .small{
-            cursor: pointer;
-            display: flex;
-            flex-direction: row;
-            
-          
-            height: 30px;
-            align-items: center;
-            justify-content: flex-end;
-            width: 10px;}
+        
     }
 
     .map2d{
@@ -99,8 +143,61 @@
         height: 100%;
     }
 }
-@media (max-width: 555px) {
+.event-container{
+    position: absolute;
+  
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 50vh;
+    height: 90vh;
+    margin-left: 5%;
+    .box{
+        z-index: 20;
+        
+        width: 440px;
+        height: 434px;
+        /* From https://css.glass */
+background: rgba(139, 139, 139, 0.021);
 
+backdrop-filter: blur(9.9px);
+-webkit-backdrop-filter: blur(9.9px);
+
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        .event-header{
+            height: 75px;
+            background-color: #FDB417;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            
+            color: white;
+           
+            .clock{
+                margin-left: 40px;
+                .date{
+                    font-size: .8rem;
+                    font-weight: 600;
+                }
+                .time{
+                    font-size: .7rem;
+                    font-weight: 300;
+                }
+            }
+            .title-text{
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+@media (max-width: 555px) {
+    .event-container{
+        display: none;
+    }
     .main-screen{
         .main-cloud{
             margin-top: 20%;

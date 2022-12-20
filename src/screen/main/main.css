@@ -26,7 +26,43 @@
   margin: 20% 10%;
 }
 
-.main-screen .search .inputd {
+.main-screen .search .search-engine ul {
+  box-sizing: border-box;
+  width: 100%;
+  list-style: none;
+  font-size: 1rem;
+  color: #493636;
+  padding: 0;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+  background: rgba(70, 62, 40, 0.042);
+  border-radius: 8px;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(70, 62, 40, 0.035);
+  min-height: 0px;
+}
+
+.main-screen .search .search-engine ul li {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  color: rgba(90, 90, 90, 0.733);
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0);
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-indent: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.079);
+}
+
+.main-screen .search .search-engine ul li:hover {
+  background: rgba(70, 62, 40, 0.035);
+  color: rgba(52, 52, 52, 0.8);
+}
+
+.main-screen .search .search-engine .inputd {
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -37,14 +73,14 @@
   transition: 500ms ease-in-out;
 }
 
-.main-screen .search .inputd img {
+.main-screen .search .search-engine .inputd img {
   height: 40px;
   padding: 20px;
   position: absolute;
   cursor: pointer;
 }
 
-.main-screen .search .inputd input {
+.main-screen .search .search-engine .inputd input {
   position: absolute;
   outline: none;
   box-sizing: border-box;
@@ -62,12 +98,12 @@
   border: 1px solid rgba(70, 62, 40, 0.035);
 }
 
-.main-screen .search .inputd input::placeholder {
+.main-screen .search .search-engine .inputd input::placeholder {
   color: #493636;
   font-weight: 700;
 }
 
-.main-screen .search .small {
+.main-screen .search .search-engine .small {
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -97,7 +133,60 @@
   height: 100%;
 }
 
+.event-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vh;
+  height: 90vh;
+  margin-left: 5%;
+}
+
+.event-container .box {
+  z-index: 20;
+  width: 440px;
+  height: 434px;
+  /* From https://css.glass */
+  background: rgba(139, 139, 139, 0.021);
+  backdrop-filter: blur(9.9px);
+  -webkit-backdrop-filter: blur(9.9px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.event-container .box .event-header {
+  height: 75px;
+  background-color: #FDB417;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  color: white;
+}
+
+.event-container .box .event-header .clock {
+  margin-left: 40px;
+}
+
+.event-container .box .event-header .clock .date {
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.event-container .box .event-header .clock .time {
+  font-size: .7rem;
+  font-weight: 300;
+}
+
+.event-container .box .event-header .title-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
 @media (max-width: 555px) {
+  .event-container {
+    display: none;
+  }
   .main-screen .main-cloud {
     margin-top: 20%;
   }

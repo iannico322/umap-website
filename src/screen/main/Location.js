@@ -1,9 +1,9 @@
-import { useLoader,useFrame,useThree } from '@react-three/fiber';
+import { useLoader,useFrame } from '@react-three/fiber';
 import {Text3D ,
     Float,
   } from "@react-three/drei";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { useEffect,useRef,useState } from 'react';
+import { useRef,useState } from 'react';
 
 
 export function Location(props) {
@@ -17,7 +17,6 @@ export function Location(props) {
 
   let buildingName = ["b1","b2","b3"]
   const direction = useRef(null)
-  const { camera } = useThree()
 
   useFrame((state)=>{
 
@@ -28,7 +27,7 @@ export function Location(props) {
       setTitle("CITC BUILDING")
 
 
-    if (props.search == buildingName[0]) {
+    if (props.search === buildingName[0]) {
       
     direction.current.position.x = 40
       direction.current.position.y = 20
@@ -38,14 +37,14 @@ export function Location(props) {
 
       
 
-    }else if (props.search == buildingName[1]){
+    }else if (props.search === buildingName[1]){
       direction.current.position.x = -6
       direction.current.position.y = 20
       direction.current.position.z = 40
       direction.current.rotation.set(0,-200,0)
       setTitle("Library")
       
-    }else if (props.search == buildingName[2]){
+    }else if (props.search === buildingName[2]){
       direction.current.position.x = 50
       direction.current.position.y = 12
       direction.current.position.z = 5
@@ -54,9 +53,9 @@ export function Location(props) {
     }else{
       direction.current.position.x = 110
       direction.current.position.y = 0
-      direction.current.position.z = 50
+      direction.current.position.z = -30
       direction.current.rotation.set(0,-200,0)
-      setTitle("UMAP")
+      setTitle("USTP MAP")
     }
     
    
