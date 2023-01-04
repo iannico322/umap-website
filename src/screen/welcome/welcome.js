@@ -5,7 +5,7 @@ import Cloud2 from "./../../media/image/cloud_2.png";
 import Map1 from "./../../media/image/map3d_1.png";
 import {  Link } from "react-router-dom";
 import { Load } from "../loader/loader";
-
+import downloadIcon from "../../media/image/download-icon.svg"
 import "./welcome.css";
 
 
@@ -27,7 +27,7 @@ export const Welcome = () => {
             link1Address = "/login"
             link2 = "Download"
             single = ".download"
-            iconlink2 = "fa-regular fa-circle-down"
+            iconlink2 = {downloadIcon}
         />
         <div className="cloud-model">
           <img src={Cloud1} alt="" />
@@ -57,7 +57,6 @@ export const Welcome = () => {
                onClick={()=>{
                 document.querySelector('.main').click()
             }}
-               
                >I'm a guest</button>
               
             </div>

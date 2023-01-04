@@ -20,13 +20,18 @@ export const Navbar2 = (props) => {
 
             }}>Menu</button>
             <ul className='links hide-link'>
-                <li>Profile</li>
-                <li>Going To</li>
                 <li onClick={()=>{
-                    document.querySelector(".Press").click()
+                    document.querySelector(".profile").click()
+                }} >Profile</li>
+                <li onClick={()=>{
+                    document.querySelector(".main").click()
+                }} >Going To</li>
+                <li onClick={()=>{
+                    document.querySelector(".out").click()
                 }}>Log Out</li>
-
-                <Link to="/login" className="Press"></Link>
+                <Link to="/profile" className="profile"></Link>
+                <Link to="/main" className="main"></Link>
+                <Link to="/login" className="out"></Link>
                 {/* <a href="#" className='download' download={Download}></a> */}
                 
             </ul>

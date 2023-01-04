@@ -2,6 +2,7 @@
 import { Welcome} from './screen/welcome/welcome';
 import { Login } from './screen/login/login';
 import { Register } from './screen/register/register';
+import { Profile } from './screen/profile/profile';
 import MainDasboard from './screen/main/main';
 import {
   BrowserRouter as Router,
@@ -19,6 +20,7 @@ function App() {
         <Route path="/umap-website" element={<Navigate replace to="/" />} />
         <Route  path="/" element={<Welcome />} />
         <Route  path="login" element={<Login />} />
+        <Route  path="profile" element={<Profile />} />
         <Route  path="main" element={<MainDasboard />} />
         <Route  path="register" element={<Register />} />
         

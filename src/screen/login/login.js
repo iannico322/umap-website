@@ -42,7 +42,7 @@ export const Login = () => {
     
     <div className="login-screen">
       <div class="ui active centered inline loader"></div>
-      <Navbar link2="Register" single=".Press" link1Address="/register" />
+      <Navbar link2="Register" single=".Press" link1Address="/register" iconlink2 = "" />
 
       <div className="cloud-model-login">
         <img src={Cloud1} alt="" />

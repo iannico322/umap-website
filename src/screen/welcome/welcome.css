@@ -67,7 +67,6 @@
   cursor: pointer;
   font-size: 1.2rem;
   color: white;
-  transition: 100ms ease-in-out;
 }
 
 .welcome-container .welcome-box div button:nth-child(1) {

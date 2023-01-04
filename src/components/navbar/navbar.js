@@ -3,7 +3,18 @@ import Logo from './../../media/image/umap-logo.png'
 // import Download from './../../media/image/hehe.jpg'
 import {  Link } from "react-router-dom";
 import './navbar.css';
+
+const IconButton = (props)=>{
+  console.log(props.iconlink2)
+  if (props.iconlink2 !== ""){
+    return (<img src={props.iconlink2}  alt="download-icon"/>)
+  }else{
+    return null;
+  }
+}
+
 export const Navbar = (props) => {
+   
   return (
     
     <div className='nav'>
@@ -19,7 +30,11 @@ export const Navbar = (props) => {
 
             <li onClick={()=>{
                document.querySelector(props.single).click()
-            }}><i class={props.iconlink2}></i> {props.link2}</li> 
+            }}>
+              
+              <IconButton
+                iconlink2 = {props.iconlink2}
+              /> {props.link2}</li> 
 
             <Link to={props.link1Address} className="Press"></Link>
             {/* <a href="#" className='download' download={Download}></a> */}

@@ -35,8 +35,10 @@
   color: #101010;
 }
 
-.nav ul li i {
-  font-size: 25px;
+.nav ul li img {
+  pointer-events: none;
+  height: 2rem;
+  filter: invert(0.1);
   color: #101010;
 }
 
@@ -59,12 +61,14 @@
 }
 
 .nav ul li:nth-child(2):hover, .nav ul li:nth-child(2):hover > i {
-  color: #f8f8f8;
+  filter: invert(1);
+  color: black;
 }
 
 .nav ul li:nth-child(2):active {
   color: #1f1f1f;
-  background-color: #eeeeee;
+  border: 1px solid rgba(0, 0, 0, 0.094);
+  background-color: #cfcfcf;
   filter: drop-shadow(0px 0px 1px rgba(121, 121, 121, 0.279));
 }
 
