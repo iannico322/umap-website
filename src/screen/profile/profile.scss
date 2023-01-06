@@ -1,4 +1,5 @@
 
+
 .schedule-container{
     font-size: 16px;
     transition: 200ms ease-in-out;
@@ -236,22 +237,29 @@
                 justify-content: flex-end;
                 align-items: center;
                 flex-direction: column;
-                
+                flex-wrap: wrap;
 
                 .room-con{
-                    height: 57%;
-                    color: #626262;
+                    height: 53%;
+                    overflow: hidden;
+                    width: 80%;
                     display: flex;
+                    align-items: center;
                     flex-direction: column;
-                    align-items:flex-start;
-                    justify-content: center;
-                    .top{
+                    
+                    color: #626262;
+                    
+                    
+                   
+                    .stop{
                         font-size: 1.3rem;
                         font-weight: 600;
                         
                     }
-                    .bottom{
-                        font-size: 4.3rem;
+                    .sbottom{
+                        
+                       
+                        font-size: 4rem;
                         font-weight: 600;
                     }
                 }

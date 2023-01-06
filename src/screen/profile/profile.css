@@ -244,24 +244,26 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .profile-container .reminder-container .reminder-box .card .room-con {
-  height: 57%;
-  color: #626262;
+  height: 53%;
+  overflow: hidden;
+  width: 80%;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  color: #626262;
 }
 
-.profile-container .reminder-container .reminder-box .card .room-con .top {
+.profile-container .reminder-container .reminder-box .card .room-con .stop {
   font-size: 1.3rem;
   font-weight: 600;
 }
 
-.profile-container .reminder-container .reminder-box .card .room-con .bottom {
-  font-size: 4.3rem;
+.profile-container .reminder-container .reminder-box .card .room-con .sbottom {
+  font-size: 4rem;
   font-weight: 600;
 }
 

@@ -7,7 +7,13 @@ import "./profile.css";
 
 export const Profile = () => {
   const [room, setRoom] = useState("");
-  const [selectedDay, setSelectedDay] = useState("");
+  const [items1, setItems1] = useState(["lab"]);
+  const [items2, setItems2] = useState(["202"]);
+  const [items3, setItems3] = useState(["WED"]);
+  const [items4, setItems4] = useState(["7:00AM-10:00AM"]);
+  const [clicked, setclicked] = useState(true);
+  const items = items1;
+  const [selectedDay, setSelectedDay] = useState("MON");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
 
@@ -25,56 +31,54 @@ export const Profile = () => {
     return `${hours}:${minutes}${ampm}`;
   }
 
-  function handleChange(event) {
-    setSelectedDay(event.target.value);
-  }
-
-  const [items1, setItems1] = useState(["lab"]);
-  const [items2, setItems2] = useState(["202"]);
-  const [items3, setItems3] = useState(["WED"]);
-  const [items4, setItems4] = useState(["7:00AM-10:00AM"]);
-  const items = items1;
+  
 
 
 
-  let clicked = true;
+
   function showForm(){
     let ambot = document.querySelector(".schedule-container")
 
     if(clicked){
       ambot.style.opacity = "1"
       ambot.style.pointerEvents = "all"
-      clicked = false
+      setclicked(false)
     }else{
       ambot.style.opacity = "0"
       ambot.style.pointerEvents = "none"
-      clicked = true
+      setclicked(true)
     }
     
   }
 
   const addItem = () => {
+    
     setItems1([...items1, "lab"]);
     setItems2([...items2, room]);
     setItems3([...items3, selectedDay]);
     setItems4([...items4,
       `${convertTimeFormat(startTime)} - ${convertTimeFormat(endTime)} `,
     ]);
-
+    showForm()
     setRoom("");
     setSelectedDay("");
     setStartTime("");
     setEndTime("");
+
     
   };
 
   function handleSubmit(event) {
+    
     event.preventDefault();
-    showForm()
     // Add code here to handle the form submission
-    addItem()
+   
+    setInterval(addItem(), 5000);
     
   }
+
+
+  
   
   return (
     <>
@@ -95,21 +99,24 @@ export const Profile = () => {
 
             <div className="day">
               <p> Day? </p>
-              <select value={selectedDay} onChange={handleChange}>
-                <option value="MON">MON</option>
+              <select required  value={selectedDay} onChange={(e)=>{
+                setSelectedDay(e.target.value)
+              }} >
+                <option value="MON" >MON</option>
                 <option value="TUE">TUE</option>
                 <option value="WED">WED</option>
                 <option value="THU">THU</option>
-                <option value="FRI">FRI</option>
-                <option value="THU">SAT</option>
-                <option value="FRI">SUN</option>
-              </select>
+                <option value="FRI" selected>FRI</option>
+                <option value="SAT">SAT</option>
+                <option value="SUN">SUN</option>
+              </select>x``
             </div>
             <div className="time">
             <p className="time-title">Time duration</p>
             <div className="time-inputs">
               <div>
                 <p>Start</p>
+
                 <input
                 type="time"
                 required
@@ -141,6 +148,7 @@ export const Profile = () => {
               type="text"
               placeholder="Search room"
               value={room}
+              required
               onChange={(e) => {
                 setRoom(e.target.value);
               }}
@@ -179,10 +187,13 @@ export const Profile = () => {
               <img src={Plus} alt="Plus-icon" />
             </div>
             {items.map((item, index) => (
-              <div className="card">
-                <div className="room-con">
-                  <div className="top">{items1[index].toUpperCase()}</div>
-                  <div className="bottom">{items2[index]}</div>
+              <div className="card ">
+                <div className="room-con ">
+                
+                  <div className="stop">{items1[index].toUpperCase() }</div>
+                  
+                    <div className="sbottom " > {items2[index]}</div>
+                
                 </div>
 
                 <div className="date-con">

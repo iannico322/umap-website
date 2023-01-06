@@ -15,7 +15,7 @@ export function Location(props) {
   
   const [title,setTitle] = useState("")
 
-  let buildingName = ["b1","b2","b3"]
+  let buildingName = ["9","23","b3"]
   const direction = useRef(null)
 
   useFrame((state)=>{
@@ -24,7 +24,7 @@ export function Location(props) {
       direction.current.position.y = 20
       direction.current.position.z =-45
       direction.current.rotation.set(0,-200.50,0)
-      setTitle("CITC BUILDING")
+      setTitle(props.roomSearch)
 
 
     if (props.search === buildingName[0]) {
@@ -33,7 +33,7 @@ export function Location(props) {
       direction.current.position.y = 20
       direction.current.position.z =-45
       direction.current.rotation.set(0,-200.50,0)
-      setTitle("CITC BUILDING")
+      setTitle(props.roomSearch)
 
       
 
@@ -42,14 +42,14 @@ export function Location(props) {
       direction.current.position.y = 20
       direction.current.position.z = 40
       direction.current.rotation.set(0,-200,0)
-      setTitle("Library")
+      setTitle(props.roomSearch)
       
     }else if (props.search === buildingName[2]){
       direction.current.position.x = 50
       direction.current.position.y = 12
       direction.current.position.z = 5
       direction.current.rotation.set(0,-200,0)
-      setTitle("Gym")
+      setTitle(props.roomSearch)
     }else{
       direction.current.position.x = 110
       direction.current.position.y = 0
