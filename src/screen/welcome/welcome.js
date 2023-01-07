@@ -55,7 +55,7 @@ export const Welcome = () => {
                 >Student</button>
                <button 
                onClick={()=>{
-                document.querySelector('.main').click()
+                document.querySelector('.guest').click()
             }}
                >I'm a guest</button>
               
@@ -65,6 +65,7 @@ export const Welcome = () => {
       </div>
       <Link to="/main" className="main"></Link>
       <Link to="/login" className="Press"></Link>
+      <Link to="/guest" className="guest"></Link>
       
     </>
   );

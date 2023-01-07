@@ -35,7 +35,7 @@ export function Location(props) {
       direction.current.position.z =-45
       direction.current.rotation.set(0,-200.50,0)
       setTitle(props.roomSearch)
-      setdiscription(`CITC Building | ${props.floor} : ${props.block}` )
+      setdiscription(`CITC Building | F ${props.floor} : B ${props.block}` )
 
       
 

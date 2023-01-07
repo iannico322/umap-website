@@ -5,6 +5,7 @@ import { Register } from './screen/register/register';
 import { Profile } from './screen/profile/profile';
 import MainDasboard from './screen/main/main';
 import { Admin } from './screen/admin/admin';
+import Guest from './screen/main/guest';
 import {
   BrowserRouter as Router,
   Route,
@@ -24,6 +25,7 @@ function App() {
         <Route  path="profile" element={<Profile />} />
         <Route  path="admin" element={<Admin />} />
         <Route  path="main" element={<MainDasboard />} />
+        <Route  path="guest" element={<Guest/>} />
         <Route  path="register" element={<Register />} />
         
       </Routes>

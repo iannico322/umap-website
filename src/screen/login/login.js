@@ -91,6 +91,7 @@ export const Login = () => {
         </div>
       </div>
       <Link to="/main" className="main"></Link>
+      
       <Link to="/admin" className="admin"></Link>
     </div>
     </>
