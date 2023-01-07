@@ -242,6 +242,9 @@
 
 @media (max-width: 670px) {
   .events .event {
+    width: 220px;
+    height: 55vh;
+    align-items: flex-end;
     margin-left: 0%;
     left: 0;
   }
@@ -261,6 +264,9 @@
     font-weight: 500;
   }
   .events .event-container {
+    width: 220px;
+    height: 55vh;
+    align-items: flex-end;
     margin-left: 0%;
     left: 0;
   }

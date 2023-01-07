@@ -19,7 +19,7 @@ import { Card } from "../../components/card/card";
 import { Search } from "../../components/search/search";
 import ArrowForward from "../../media/image/arrow_forward.svg"
 import ArrowBackward from "../../media/image/arrow_back.svg"
-
+import { Load } from "../loader/loader";
 
 function MainDasboard() {
   const [buildingSearch, setBuildingSearch] = useState("")
@@ -54,7 +54,7 @@ function MainDasboard() {
 
   return (
     <>
-      {/* <Load /> */}
+      <Load />
       <div className="main-screen">
         <div className="page">
           
