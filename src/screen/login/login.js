@@ -21,7 +21,11 @@ export const Login = () => {
     if(username === "umap" && password ==="umap"){
       document.querySelector('.main').click()
       
-    }else{
+    }else if(username === "admin" && password ==="admin"){
+      document.querySelector('.admin').click()
+    }
+    
+    else{
 
       setAlert("alert show")
       setTimeout(() => {
@@ -36,7 +40,7 @@ export const Login = () => {
     <Load/>
     <div className={alert}>
     <Alert variant="outlined" severity="error">
-      This is an error alert — check it out!
+      Invalid Username or Password
     </Alert>
     </div>
     
@@ -87,6 +91,7 @@ export const Login = () => {
         </div>
       </div>
       <Link to="/main" className="main"></Link>
+      <Link to="/admin" className="admin"></Link>
     </div>
     </>
   );

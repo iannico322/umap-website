@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Navbar2 } from "../../components/navbar/navbar2";
 import Plus from "../../media/image/+.png";
 import Ex from "../../media/image/x-icon.svg"
-import bgImage from '../../media/image/Group 274.png'
-import "./profile.css";
+import bgImage from '../../media/image/ustp.png'
+import "./admin.css";
 
-export const Profile = () => {
+export const Admin = () => {
   const [room, setRoom] = useState("");
-  const [items1, setItems1] = useState(["lab"]);
-  const [items2, setItems2] = useState(["202"]);
-  const [items3, setItems3] = useState(["WED"]);
+  const [items1, setItems1] = useState(["Week Of Welcome"]);
+  const [items2, setItems2] = useState(["B1"]);
+  const [items3, setItems3] = useState(["Jan 21"]);
   const [items4, setItems4] = useState(["7:00AM-10:00AM"]);
   const [clicked, setclicked] = useState(true);
   const items = items1;
@@ -86,7 +86,7 @@ export const Profile = () => {
         <div className="form-con">
           <div className="header-con">
             <div>
-              <h1>Set Schedule</h1>
+              <h1>Set Event</h1>
             <img src={Ex} alt=""  onClick={()=>{
             console.log("out")
             showForm()
@@ -168,11 +168,11 @@ export const Profile = () => {
           
         />
 
-        <div className="profile-background">
+        <div className="profile-background-admin">
           <img src={bgImage} alt="" />
         </div>
         <div className="profile">
-          <h1>Nicolas Yan</h1>
+          <h1>Admin Panel</h1>
           <button>Edit</button>
         </div>
 
@@ -187,8 +187,8 @@ export const Profile = () => {
               <img src={Plus} alt="Plus-icon" />
             </div>
             {items.map((item, index) => (
-              <div className="card ">
-                <div className="room-con ">
+              <div className="card-admin ">
+                <div className="room-con-admin ">
                 
                   <div className="stop">{items1[index].toUpperCase() }</div>
                   

@@ -8,10 +8,8 @@ import {
 import { Suspense, useState } from "react";
 import { Map } from "./Map";
 import { Navbar2 } from "../../components/navbar/navbar2";
-
-import { Load } from "../loader/loader";
 import { Location } from "./Location";
-import Magnifying from './../../media/image/Magnifier.png'
+
 import Map2d from './../../media/image/2dmapc.png'
 
 import Cloud1 from "./../../media/image/cloud_2-big.png";
@@ -19,12 +17,16 @@ import "./main.css";
 import { Cloud } from "./Cloud";
 import { Card } from "../../components/card/card";
 import { Search } from "../../components/search/search";
-
+import ArrowForward from "../../media/image/arrow_forward.svg"
+import ArrowBackward from "../../media/image/arrow_back.svg"
 
 
 function MainDasboard() {
   const [buildingSearch, setBuildingSearch] = useState("")
   const [roomSearch, setRoomSearch] = useState("")
+
+  const [roomfloor, setRoomfloor] = useState("")
+  const [roomblock, setRoomblock] = useState("")
   
   setInterval(displayDateTime, 1000);
   const updateQueryBuilding = newQuery => {
@@ -36,6 +38,17 @@ function MainDasboard() {
     console.log("itworks3")
     setRoomSearch(newQuery); // update the search query with the new value
   };
+
+  const updateQueryFloor = newQuery => {
+    console.log(newQuery)
+    setRoomfloor(newQuery); // update the search query with the new value
+  };
+
+  const updateQueryBlock = newQuery => {
+    console.log(newQuery )
+    setRoomblock(newQuery); // update the search query with the new value
+  };
+
 
 
 
@@ -60,7 +73,31 @@ function MainDasboard() {
             single=".Press"
           />
 
-          <div className="event-container">
+        <div className="events">
+          <div className="event">
+            <div className="box">
+              <div className="event-header "
+              onClick={()=>{
+                let eventBoard = document.querySelector(".event-container")
+                eventBoard.style.display = "flex"
+                let eventIndicator = document.querySelector(".event")
+                    eventIndicator.style.display = "none"
+              }}
+              
+              >
+                  
+                  <div className="title-text">
+                    Events
+                    
+                  </div>
+                  <img src={ArrowForward} className="open-event" alt="arrow-forward"
+                    
+                  
+                  />
+              </div>
+              </div>
+        </div>
+        <div className="event-container">
             <div className="box">
               <div className="event-header">
                   <div className="clock">
@@ -73,7 +110,23 @@ function MainDasboard() {
                   </div>
                   <div className="title-text">
                     Upcoming Events
+                   
+                  
                   </div>
+                  <img src={ArrowBackward} className="event-arrow" alt="arrow-forward"
+                  onClick={()=>{
+                    let eventIndicator = document.querySelector(".event")
+                    eventIndicator.style.display = "flex"
+
+                    let eventBoard = document.querySelector(".event-container")
+                eventBoard.style.display = "none"
+
+                    
+                  }}
+                  
+                  
+                  />
+                    
               </div>
               <div className="event-content">
                  <Card
@@ -107,7 +160,7 @@ function MainDasboard() {
                   building = "B3"
                   onMouseOver = {()=>{
                     setRoomSearch("Graduation")
-                    setBuildingSearch("b3")
+                    setBuildingSearch("16")
                   }}
                   onMouseOut={()=>{
                     setRoomSearch("")
@@ -118,11 +171,20 @@ function MainDasboard() {
             </div>
             
           </div>
+        
+        
+        
+        
+        </div>
+        
+          
           <div className="search">
            
             <Search 
               onBuilding={updateQueryBuilding}
               onRoom = {updateQueryRoom}
+              onFloor = {updateQueryFloor}
+              onBlock = {updateQueryBlock}
             />
           
  
@@ -159,6 +221,8 @@ function MainDasboard() {
                 < Location
                   search = {buildingSearch}
                   roomSearch = {roomSearch}
+                  floor = {roomfloor}
+                  block = {roomblock}
                   
                 />
               </Float>

@@ -14,8 +14,9 @@ export function Location(props) {
   
   
   const [title,setTitle] = useState("")
+  const [discription, setdiscription] = useState()
 
-  let buildingName = ["9","23","b3"]
+  let buildingName = ["9","23","16"]
   const direction = useRef(null)
 
   useFrame((state)=>{
@@ -34,6 +35,7 @@ export function Location(props) {
       direction.current.position.z =-45
       direction.current.rotation.set(0,-200.50,0)
       setTitle(props.roomSearch)
+      setdiscription(`CITC Building | ${props.floor} : ${props.block}` )
 
       
 
@@ -43,6 +45,7 @@ export function Location(props) {
       direction.current.position.z = 40
       direction.current.rotation.set(0,-200,0)
       setTitle(props.roomSearch)
+      setdiscription(`LRC | F ${props.floor} : B ${props.block}` )
       
     }else if (props.search === buildingName[2]){
       direction.current.position.x = 50
@@ -50,12 +53,14 @@ export function Location(props) {
       direction.current.position.z = 5
       direction.current.rotation.set(0,-200,0)
       setTitle(props.roomSearch)
+      setdiscription(`DRER Memorial Hall | F ${props.floor} : B ${props.block}` )
     }else{
       direction.current.position.x = 110
       direction.current.position.y = 0
       direction.current.position.z = -30
       direction.current.rotation.set(0,-200,0)
       setTitle("USTP MAP")
+      setdiscription("Developed By College Cheetah")
     }
     
    
@@ -87,11 +92,11 @@ export function Location(props) {
        <Float position={[0, -5, 0]}  rotationIntensity={0} floatIntensity={0}>
        <Text3D
          font={process.env.PUBLIC_URL + "/fonts/Roboto_Regular.json"}
-         size={2}
+         size={2.2}
          height={0.065}
          curveSegments={12}
        >
-         BY:  College Cheetah
+        {discription}
          <meshStandardMaterial color="#3c3c3c" />
          
        </Text3D>

@@ -1,7 +1,7 @@
 .nav2 {
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 30;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,14 +61,65 @@
   color: #4a4a4a;
 }
 
-@media (max-width: 781px) {
-  .nav2 .menu .menu-btn {
-    display: block;
+@media (max-width: 989px) {
+  .nav2 {
+    justify-content: space-between;
+    align-items: flex-start;
   }
-  .nav2 .menu .hide-link {
-    display: flex;
-    flex-direction: column;
+  .nav2 .logo {
     justify-content: flex-start;
     align-items: flex-start;
+  }
+  .nav2 .logo img {
+    height: 100px;
+    width: 140px;
+  }
+  .nav2 .menu {
+    margin-top: 3%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .nav2 .menu .hide-link {
+    display: none;
+    pointer-events: none;
+  }
+  .nav2 .menu .links {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .nav2 .menu .links li {
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .nav2 .menu .menu-btn {
+    display: flex;
+    cursor: pointer;
+    filter: invert(0.4);
+  }
+  .nav2 .menu .hide-link {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 670px) {
+  .nav2 {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .nav2 .logo {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .nav2 .logo img {
+    height: 100px;
+    width: 140px;
+  }
+  .nav2 .menu {
+    margin-top: 30px;
   }
 }

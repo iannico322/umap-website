@@ -2,7 +2,7 @@
 
     position: absolute;
     width: 100%;
-    z-index: 2;
+    z-index: 30;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,18 +65,59 @@
     
     
 }
-@media  (max-width: 781px)  {
+@media  (max-width: 989px)  {
+    
     .nav2{
+        justify-content: space-between;
+            align-items: flex-start;
+        .logo{
+            
+            justify-content: flex-start;
+            align-items: flex-start;
+            img{
+                height: 100px;
+                width: 140px;
+            }
+        }
+        
         .menu{
+            margin-top: 3%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+               
+            .hide-link{
+                display: none;
+                pointer-events: none;
+            }
+            
+                
+            .links{
+                gap: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                
+         
+               
+                li{
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+            }
+            
             .menu-btn{
-                display: block;
+                display: flex;
+                cursor: pointer;
+                
+                filter: invert(.4);
             }
             
             .hide-link{
-                display: flex;
+              
                 flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
+                
             }    
           
                 
@@ -90,4 +131,34 @@
     
 
 }
+@media (max-width: 670px) {
+    
+    .nav2{
+        justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+        .logo{
+            
+            justify-content: flex-start;
+            align-items: flex-start;
+            img{
+                height: 100px;
+                width: 140px;
+            }
+        }
+        
+        .menu{
+            margin-top: 30px;
+           
+           
+                
+           
+                
+          
+            
+        }
+        
+    }
+    
 
+}

@@ -91,6 +91,9 @@ export const Search = (props) => {
                     setBuildingNumber(suggestion.buildingNumber)
                     props.onBuilding(suggestion.buildingNumber)
                     props.onRoom(suggestion.roomName)
+                    props.onFloor(suggestion.floorNumber)
+                    props.onBlock(suggestion.blockNumber)
+
                     console.log(suggestion.buildingNumber)
 
                     }}
