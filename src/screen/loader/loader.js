@@ -4,19 +4,10 @@ import './load.css'
  
  export const Load = (props) => {
     const [load, setLoad] = useState("loader-screen show")
-   
-    if(props.load === "hide"){
     
-      setTimeout(() => {
+    setTimeout(() => {
       setLoad("loader-screen hide")
-    }, 1000);
-    }else{
-    
-      setTimeout(() => {
-      setLoad("loader-screen hide")
-    }, 1000);
-    }
-    
+    },props.time);
    return (
     <div className={load}>
      <p>Loading</p>

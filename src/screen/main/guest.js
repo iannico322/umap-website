@@ -5,7 +5,7 @@ import {
   Environment,
   Float,
 } from "@react-three/drei";
-import { Suspense, useState } from "react";
+import { Suspense, useState,useEffect } from "react";
 import { Map } from "./Map";
 import { Navbar3 } from "../../components/navbar/navbar3";
 import { Location } from "./Location";
@@ -15,10 +15,9 @@ import Map2d from './../../media/image/2dmapc.png'
 import Cloud1 from "./../../media/image/cloud_2-big.png";
 import "./main.css";
 import { Cloud } from "./Cloud";
-import { Card } from "../../components/card/card";
+
 import { Search } from "../../components/search/search";
-import ArrowForward from "../../media/image/arrow_forward.svg"
-import ArrowBackward from "../../media/image/arrow_back.svg"
+
 import { Load } from "../loader/loader";
 
 function Guest() {
@@ -50,11 +49,29 @@ function Guest() {
   };
 
 
+  const [loading, setLoading] = useState("");
+ 
+  useEffect(() => {
+    const onPageLoad = () => {
+      setLoading("hide")
+    };
 
+    // Check if the page has already loaded
+    if (document.readyState === 'complete') {
+      onPageLoad();
+    } else {
+      window.addEventListener('load', onPageLoad);
+      // Remove the event listener when component unmounts
+      return () => window.removeEventListener('load', onPageLoad);
+    }
+  }, []);
 
   return (
     <>
-      <Load />
+      <Load
+      load = {loading}
+     />
+    
       <div className="main-screen">
         <div className="page">
           

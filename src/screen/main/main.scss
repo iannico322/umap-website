@@ -20,6 +20,7 @@
          }
     }
     .search{
+        box-sizing: border-box;
         z-index: 4;
         position: fixed;
         right: 0;
@@ -63,7 +64,7 @@
         align-items: center;
         width: 50vh;
         height: 90vh;
-  
+        
         z-index: 5;
         margin-left: 5%;
         .box{
@@ -72,6 +73,7 @@
             
             width: 440px;
             height: 434px;
+     
             /* From https://css.glass */
  
             .event-header{
@@ -121,7 +123,7 @@
 
 
     .event-container{
-        position: absolute;
+        position: fixed;
         transition: 600ms ease-in-out;
         
       
@@ -129,16 +131,16 @@
         
         justify-content: center;
         align-items: center;
-        width: 50vh;
-        height: 90vh;
+       
         margin-left: 5%;
-
+        margin-top: 20vh;
         .box{
             transition: 600ms ease-in-out;
             z-index: 4;
             
             width: 440px;
             height: 434px;
+
             /* From https://css.glass */
     background: rgba(139, 139, 139, 0.021);
     
@@ -201,27 +203,18 @@
     }
 }
 
-
-@media  (max-width: 1208px)  {
-    .events{
-        .event{
-            .box{
-                width: 80%;
-            min-height: 40%;
-            
-            .title-text{
-                font-size: 1.4rem;
-                font-weight: 500;
-               
-            }
+@media (max-height: 828px)  {
+    .main-screen{
+       
+        .search{
+            margin-top: 10%;
         }
-        }
-   
+    }
     .event-container{
-        
+ 
+
         .box{
-            width: 80%;
-            min-height: 40%;
+           
             .event-header{
                 
                
@@ -243,7 +236,31 @@
             }
         }
     }
-}}
+
+
+
+}
+@media  (max-width: 1208px)  {
+    .events{
+        .event{
+            .box{
+                width: 80%;
+            min-height: 40%;
+            
+            .title-text{
+                font-size: 1.4rem;
+                font-weight: 500;
+               
+            }
+        }
+    }
+        }
+   
+      
+    
+    
+    
+}
 @media  (max-width: 1165px)  {
     .events{
 
@@ -261,13 +278,12 @@
             
         }
         }
-    .event-container{
-        justify-content: flex-start;
-        margin-left: 0%;
-        .box{
-            width: 70%;
+        .event-container{
+            width: 420px;
+            
+    
+            
         }
-    }
 }}
 @media (max-width: 670px) {
     .events{
@@ -298,12 +314,12 @@
             }
         }}
         }
-    .event-container{
-      width: 220px;
-      height: 55vh;
-      align-items: flex-end;
-        margin-left: 0%;
-        left: 0;
+        .event-container{
+            width: 220px;
+            
+    
+            
+        
         .box{
             width: 220px;
             min-height: 10px;
@@ -354,7 +370,7 @@
             height: 30px;
             align-items: center;
             justify-content: flex-end;
-            width: 300px;
+            
         }
         .small{
             cursor: pointer;
@@ -378,5 +394,6 @@
             }
         }
     }
+    
     
 }

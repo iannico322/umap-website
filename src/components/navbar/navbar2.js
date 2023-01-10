@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import Logo from './../../media/image/umap-logo.png'
 // import Download from './../../media/image/hehe.jpg'
 import {  Link } from "react-router-dom";
@@ -40,11 +40,12 @@ export const Navbar2 = (props) => {
                 
 
             }}/>
+       
             <ul className='links hide-link'>
-                <li onClick={()=>{
+                <li className={props.profile} onClick={()=>{
                     document.querySelector(".profile").click()
                 }} >Profile</li>
-                <li onClick={()=>{
+                <li className={props.goingTo} onClick={()=>{
                     document.querySelector(".main").click()
                 }} >Going To</li>
                 <li onClick={()=>{

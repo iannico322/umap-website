@@ -46,6 +46,13 @@
   gap: 60px;
 }
 
+.nav2 .menu .links .selected {
+  color: #242424;
+  height: 30px;
+  border-radius: 0px;
+  background-color: #FDB417;
+}
+
 .nav2 .menu .links li {
   min-width: 100px;
   font-size: 1.1rem;

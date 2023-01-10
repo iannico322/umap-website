@@ -29,6 +29,7 @@ function MainDasboard() {
   const [roomblock, setRoomblock] = useState("")
   
   setInterval(displayDateTime, 1000);
+  
   const updateQueryBuilding = newQuery => {
     console.log("itworks")
     setBuildingSearch(newQuery); // update the search query with the new value
@@ -50,11 +51,14 @@ function MainDasboard() {
   };
 
 
-
+  
 
   return (
     <>
-      <Load />
+        <Load
+      time = {5000}
+     />
+    
       <div className="main-screen">
         <div className="page">
           
@@ -67,13 +71,7 @@ function MainDasboard() {
 
         <div className="canva">
           <Navbar2
-            link1="Profile"
-            link1Address="/"
-            link2="Log out"
-            single=".Press"
-            onClick = {()=>{
-              
-            }}
+            goingTo="selected"
           />
 
         <div className="events">

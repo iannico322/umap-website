@@ -35,16 +35,15 @@ export const Login = () => {
    
   }
 
-  const [loading, setLoading] = useState("");
-
-  window.onload=()=>{
-    setLoading("hide")
-  }
+  
+    
+   
+  
 
   return (
     <>
     <Load
-      load = {loading}
+      time = {3000}
      />
     <div className={alert}>
     <Alert variant="outlined" severity="error">

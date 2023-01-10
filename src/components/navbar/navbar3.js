@@ -19,28 +19,8 @@ export const Navbar3 = (props) => {
         </div>
        
         <div className='menu'>
-            <img src={Menu} className="menu-btn" alt='Menu-icon' onClick={()=>{
-                var link = document.querySelector('.links')
-               
-                
-               if(clickMenu){
-                link.classList.remove('hide-link')
-                setMenu(MenuOpenIcon)
-           
-                
-                setClickMenu(false)
-               }else{
-                link.classList.add('hide-link')
-
-                setMenu(MenuIcon)
-           
-                setClickMenu(true)
-               }
-               
-                
-
-            }}/>
-            <ul className='links hide-link'>
+         
+            <ul className='links '>
         
                 <li className='button-24' onClick={()=>{
                     document.querySelector(".out").click()

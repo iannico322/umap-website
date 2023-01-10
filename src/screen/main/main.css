@@ -20,6 +20,7 @@
 }
 
 .main-screen .search {
+  box-sizing: border-box;
   z-index: 4;
   position: fixed;
   right: 0;
@@ -112,14 +113,13 @@
 }
 
 .events .event-container {
-  position: absolute;
+  position: fixed;
   transition: 600ms ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vh;
-  height: 90vh;
   margin-left: 5%;
+  margin-top: 20vh;
 }
 
 .events .event-container .box {
@@ -187,31 +187,33 @@
   }
 }
 
+@media (max-height: 828px) {
+  .main-screen .search {
+    margin-top: 10%;
+  }
+  .event-container .box .event-header .clock {
+    margin-left: 40px;
+  }
+  .event-container .box .event-header .clock .date {
+    font-size: .8rem;
+    font-weight: 600;
+  }
+  .event-container .box .event-header .clock .time {
+    font-size: .7rem;
+    font-weight: 300;
+  }
+  .event-container .box .event-header .title-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+
 @media (max-width: 1208px) {
   .events .event .box {
     width: 80%;
     min-height: 40%;
   }
   .events .event .box .title-text {
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
-  .events .event-container .box {
-    width: 80%;
-    min-height: 40%;
-  }
-  .events .event-container .box .event-header .clock {
-    margin-left: 40px;
-  }
-  .events .event-container .box .event-header .clock .date {
-    font-size: .8rem;
-    font-weight: 600;
-  }
-  .events .event-container .box .event-header .clock .time {
-    font-size: .7rem;
-    font-weight: 300;
-  }
-  .events .event-container .box .event-header .title-text {
     font-size: 1.4rem;
     font-weight: 500;
   }
@@ -232,11 +234,7 @@
     max-height: 260px;
   }
   .events .event-container {
-    justify-content: flex-start;
-    margin-left: 0%;
-  }
-  .events .event-container .box {
-    width: 70%;
+    width: 420px;
   }
 }
 
@@ -265,10 +263,6 @@
   }
   .events .event-container {
     width: 220px;
-    height: 55vh;
-    align-items: flex-end;
-    margin-left: 0%;
-    left: 0;
   }
   .events .event-container .box {
     width: 220px;
@@ -313,7 +307,6 @@
     height: 30px;
     align-items: center;
     justify-content: flex-end;
-    width: 300px;
   }
   .main-screen .search .small {
     cursor: pointer;

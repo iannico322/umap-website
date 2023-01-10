@@ -4,7 +4,7 @@
 
 .search-engine ul {
   box-sizing: border-box;
-  width: 530px;
+  max-width: 530px;
   overflow: hidden;
   list-style: none;
   font-size: 1rem;
@@ -110,4 +110,17 @@
 
 .search-engine2 .suggestion-list2 {
   max-width: 100%;
+}
+
+@media (max-width: 915px) {
+  .search-engine ul {
+    box-sizing: border-box;
+    width: 80vw;
+    overflow: hidden;
+  }
+  .search-engine .inputd {
+    width: 80vw;
+    padding: 0px;
+    margin: 0px;
+  }
 }

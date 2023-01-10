@@ -12,11 +12,8 @@ import "./welcome.css";
 
 
 export const Welcome = () => {
-  const [loading, setLoading] = useState("");
-  window.onload=()=>{
-    setLoading("hide")
-  }
-
+ 
+ 
 
     <Link to="/login" className="Press"></Link>
   return (
@@ -24,7 +21,7 @@ export const Welcome = () => {
       
      
      <Load
-      load = {loading}
+     time = {3000}
      />
     
       <div className="welcome-screen">

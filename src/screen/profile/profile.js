@@ -160,7 +160,7 @@ export const Profile = () => {
 
       <div className="profile-container">
         <Navbar2
-          
+          profile="selected"
         />
 
         <div className="profile-background">
