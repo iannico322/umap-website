@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Magnifying from './../../media/image/Magnifier.png'
-
+import Ex from "../../media/image/x-icon.svg"
 import {rooms} from "./rooms"
 import "./search.css"
 export const Search = (props) => {
@@ -15,7 +15,7 @@ export const Search = (props) => {
         const [query, setQuery] = useState(''); // state to hold the search query
         const [suggestions, setSuggestions] = useState([]); // state to hold the suggestions
         const [originalSearchTerm, setoriginalSearchTerm] = useState(''); // state to hold the temporary query when hovering over a suggestion
-        const [buildingNumber,setBuildingNumber ] = useState('');
+        const [icon,seticon ] = useState(Magnifying);
         const search = event => {
             const listS =  document.querySelector('.suggestion-list').classList
         const searchTerm = event.target.value;
@@ -67,16 +67,23 @@ export const Search = (props) => {
                       
                       />
                       
-                  <img src={Magnifying}  alt="" onClick={()=>{
+                  <img src={icon}  alt="" onClick={()=>{
                      const sh =  document.querySelector('.inputd').classList
-                   
-                      if(x){
+                      if(icon === Ex){
+                        setQuery("")
+                        seticon(Magnifying)
+                        x = false
+                      }else{
+                        
+                        if(x){
                           sh.remove('small')
                           x = false;
                         }else{
                           sh.add('small')
                           x = true;
                         }
+                      }
+                      
                   }} />
       
                   
@@ -88,7 +95,7 @@ export const Search = (props) => {
                   <li
                   key={suggestion.roomID}
                   onClick={() => {selectSuggestion(suggestion.roomName)
-                    setBuildingNumber(suggestion.buildingNumber)
+                    seticon(Ex)
                     props.onBuilding(suggestion.buildingNumber)
                     props.onRoom(suggestion.roomName)
                     props.onFloor(suggestion.floorNumber)

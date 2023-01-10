@@ -35,9 +35,17 @@ export const Login = () => {
    
   }
 
+  const [loading, setLoading] = useState("");
+
+  window.onload=()=>{
+    setLoading("hide")
+  }
+
   return (
     <>
-    <Load/>
+    <Load
+      load = {loading}
+     />
     <div className={alert}>
     <Alert variant="outlined" severity="error">
       Invalid Username or Password

@@ -270,7 +270,12 @@
 }
 
 .profile-container .reminder-container .reminder-box .card .room-con .sbottom {
+  width: 100%;
+  font-stretch: condensed;
+  word-wrap: break-word;
+  text-align: center;
   font-size: 4rem;
+  font-size-adjust: 0.5rem;
   font-weight: 600;
 }
 

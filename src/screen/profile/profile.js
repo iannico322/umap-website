@@ -4,13 +4,14 @@ import Plus from "../../media/image/+.png";
 import Ex from "../../media/image/x-icon.svg"
 import bgImage from '../../media/image/Group 274.png'
 import "./profile.css";
+import { Search2 } from "../../components/search/search2";
 
 export const Profile = () => {
   const [room, setRoom] = useState("");
-  const [items1, setItems1] = useState(["lab"]);
-  const [items2, setItems2] = useState(["202"]);
-  const [items3, setItems3] = useState(["WED"]);
-  const [items4, setItems4] = useState(["7:00AM-10:00AM"]);
+  const [items1, setItems1] = useState(["lab","lab"]);
+  const [items2, setItems2] = useState(["202","asdasdasdasdasdasd"]);
+  const [items3, setItems3] = useState(["WED","as"]);
+  const [items4, setItems4] = useState(["7:00AM-10:00AM","asda"]);
   const [clicked, setclicked] = useState(true);
   const items = items1;
   const [selectedDay, setSelectedDay] = useState("MON");
@@ -143,16 +144,10 @@ export const Profile = () => {
             </div>
             
             <div className="room-loc">
-              <p>Room Target</p>
-            <input
-              type="text"
-              placeholder="Search room"
-              value={room}
-              required
-              onChange={(e) => {
-                setRoom(e.target.value);
-              }}
-            />
+              <p>Distination</p>
+
+             <Search2/>
+            
             </div>
             
 

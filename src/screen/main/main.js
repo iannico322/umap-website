@@ -71,6 +71,9 @@ function MainDasboard() {
             link1Address="/"
             link2="Log out"
             single=".Press"
+            onClick = {()=>{
+              
+            }}
           />
 
         <div className="events">
@@ -97,6 +100,9 @@ function MainDasboard() {
               </div>
               </div>
         </div>
+
+
+
         <div className="event-container">
             <div className="box">
               <div className="event-header">
@@ -169,7 +175,6 @@ function MainDasboard() {
                  />
               </div>
             </div>
-            
           </div>
         
         

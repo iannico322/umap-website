@@ -1,4 +1,4 @@
-import   {React} from "react";
+import   {React,useState} from "react";
 import { Navbar } from "../../components/navbar/navbar";
 import Cloud1 from "./../../media/image/cloud_1.png";
 import Cloud2 from "./../../media/image/cloud_2.png";
@@ -12,14 +12,20 @@ import "./welcome.css";
 
 
 export const Welcome = () => {
-  
+  const [loading, setLoading] = useState("");
+  window.onload=()=>{
+    setLoading("hide")
+  }
+
 
     <Link to="/login" className="Press"></Link>
   return (
     <>
       
-      <Load/>
-      
+     
+     <Load
+      load = {loading}
+     />
     
       <div className="welcome-screen">
         <Navbar 
